@@ -10,15 +10,13 @@ function App() {
   return (
     <>
       <div className="App">
-        <SlideIn startAnimation={startAnimation}>
+        {/* <SlideIn startAnimation={startAnimation}>
           <Box text={'Hello SLIDE IN'} />
-        </SlideIn>
+        </SlideIn> */}
 
-        {startAnimation && (
-          <SpringIn>
-            <Box text={'Hello REACT SPRING'} />
-          </SpringIn>
-        )}
+        <SpringIn isVisible={startAnimation}>
+          <Box text={'Hello REACT SPRING'} />
+        </SpringIn>
       </div>
       <button onClick={() => setStartAnimation(!startAnimation)}>
         Toggle Animation
